@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/openmohan/lightdns"
+	"github.com/victorlpgazolli/lightdns"
 
 	"github.com/miekg/dns"
 )
@@ -111,6 +111,7 @@ func main() {
 
 
 	dnsServer.AddZoneData(".", nil, lookupFunc, lightdns.DNSForwardLookupZone)
+
 	log.Printf("dns server is starting on port: %v", port)
 
 	dnsServer.StartAndServe()
